@@ -9,8 +9,9 @@ const userRoute = require( './routes/userRoute' );
 const errorHandler = require( './middleWare/errorHandler' );
 
 dotenv.config();
+const MONGO_URL = process.env.MONGO_URL;
 
-const PORT = process.env.PORT || 4000;
+const PORT = process.env.PORT;
 const app = express();
 
 // Middlewares
@@ -37,7 +38,7 @@ app.get( "/", ( req, res ) => {
 } );
 
 // connect to db and start server
-mongoose.connect( 'mongodb+srv://momento:XY9w2q3LmwALJpUo@cluster0.lcu5v8n.mongodb.net/Oinvent-app?retryWrites=true&w=majority' ).then( () => {
+mongoose.connect( MONGO_URL ).then( () => {
   console.log( 'Connected to mongoDB' );
   app.listen( PORT, () => {
     console.log( `Server running on port ${ PORT }` );
