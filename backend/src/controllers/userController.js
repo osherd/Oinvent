@@ -278,7 +278,7 @@ const forgotPassword = asyncHandler( async ( req, res ) => {
 
   const subject = 'Password Reset request';
   const messageContent = message;
-  const sendFrom = 'momentop2021@gmail.com'; //process.env.EMAIL_USER
+  const sendFrom = process.env.EMAIL_USER;
   const sendTo = user.email;
 
 

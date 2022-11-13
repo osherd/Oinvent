@@ -57,8 +57,8 @@ module.exports = sendEmail;
 //     port: 465,
 //     secure: true,
 //     auth: {
-//       user: 'momentop2021@gmail.com', //process.env.EMAIL_USER,
-//       pass: 'Mp1234567' //process.env.EMAIL_PASS
+//       user: process.env.EMAIL_USER,
+//       pass: process.env.EMAIL_PASS
 //     }
 //   } );
 
