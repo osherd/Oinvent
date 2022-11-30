@@ -1,0 +1,6 @@
+
+export const AUTH_ACTION_TYPES = {
+  SET_LOGIN: 'SET_LOGIN',
+  SET_USER: 'SET_USER',
+  SET_LOGOUT: 'SET_LOGOUT'
+};
